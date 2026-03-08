@@ -1,19 +1,24 @@
 body{
 margin:0;
-height:100vh;
+min-height:100vh;
+
 display:flex;
 justify-content:center;
 align-items:center;
 
-font-family:Arial;
+font-family:Arial, sans-serif;
 
 background:linear-gradient(135deg,#3e2723,#5d4037);
+
+padding:10px;
+box-sizing:border-box;
 }
 
 .chat-container{
 
-width:700px;
-height:500px;
+width:90%;
+max-width:700px;
+height:80vh;
 
 background:rgba(255,255,255,0.08);
 
@@ -135,4 +140,21 @@ border-radius:50%;
 cursor:pointer;
 
 font-size:16px;
+}
+
+@media (max-width: 768px) {
+
+    .chat-container {
+        width: 95%;
+        height: 90vh;
+        border-radius: 15px;
+    }
+
+    .message-input {
+        font-size: 16px;
+    }
+
+    .chat-messages {
+        padding: 10px;
+    }
 }
